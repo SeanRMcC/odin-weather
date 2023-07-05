@@ -3,3 +3,11 @@
     height: 250px;
     width: auto;
 }
+
+.error{
+    display: none;
+}
+
+.error-revealed{
+    display: block;
+}

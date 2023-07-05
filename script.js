@@ -9,6 +9,7 @@ const country = document.querySelector(".country");
 const condition = document.querySelector(".condition");
 const temp = document.querySelector(".temp");
 const img = document.querySelector(".condition-gif");
+const error = document.querySelector(".error");
 
 async function requestCityWeather(city){
     const response = await fetch(`http://api.weatherapi.com/v1/current.json?key=${WEATHER_KEY}&q=${city}&aqi=no`, {mode: "cors"});
@@ -34,6 +35,7 @@ searchButton.addEventListener("click", async () => {
 });
 
 function updatePage(weatherObject){
+    error.classList.remove("error-revealed");
     city.textContent = weatherObject.location.name;
     region.textContent = weatherObject.location.region;
     country.textContent = weatherObject.location.country;
@@ -42,4 +44,8 @@ function updatePage(weatherObject){
     temp.textContent = `${weatherObject.current.temp_f}°F`;
     requestGif(currentCondition)
         .then(url => img.src = url);
+}
+
+function displayError(){
+    error.classList.add("error-revealed");
 }
