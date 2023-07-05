@@ -29,7 +29,6 @@ searchButton.addEventListener("click", async () => {
     if("error" in weatherObject){
         displayError();
     }else{
-        console.log(weatherObject);
         updatePage(weatherObject);
     }
 });
