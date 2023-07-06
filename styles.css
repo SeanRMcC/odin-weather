@@ -1,7 +1,28 @@
+@font-face {
+    font-family: SourceCodePro;
+    src: url("./assets/SourceCodePro.ttf");
+}
+
+*{
+    font-family: SourceCodePro;
+}
+
+body,
+html{
+    height: 100%;
+}
+
+body{
+    display: grid;
+    place-items: center;
+    background-color: lavender;
+}
+
+
 .condition-gif{
-    display: block;
     height: 250px;
     width: auto;
+    border-radius: 15px;
 }
 
 .error{
@@ -10,4 +31,67 @@
 
 .error-revealed{
     display: block;
+}
+
+.city,
+.temp{
+    font-size: 2.5rem;
+}
+
+.region{
+    font-size: 2rem;
+}
+
+.country,
+.condition,
+label,
+button,
+input{
+    font-size: 1.5rem;
+}
+
+/*.city,
+.region,
+.country,
+.condition,
+.temp,
+label{
+    color: white;
+}*/
+
+.condition{
+    margin-right: 10px;
+}
+
+.condition-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+input,
+button{
+    border-radius: 10px;
+    padding: 10px 15px;
+}
+
+button{
+    background-color: lavenderblush;
+}
+
+input,
+button,
+.app{
+    border: 0;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
+}
+
+.app{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+    padding: 40px 60px;
+    border-radius: 25px;
+    background-color: white;
 }
