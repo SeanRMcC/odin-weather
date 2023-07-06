@@ -12,7 +12,7 @@ const img = document.querySelector(".condition-gif");
 const error = document.querySelector(".error");
 
 async function requestCityWeather(city){
-    const response = await fetch(`http://api.weatherapi.com/v1/current.json?key=${WEATHER_KEY}&q=${city}&aqi=no`, {mode: "cors"});
+    const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=${WEATHER_KEY}&q=${city}&aqi=no`, {mode: "cors"});
     const object = await response.json();
     return object;
 }
