@@ -30,6 +30,7 @@ searchButton.addEventListener("click", async () => {
     if("error" in weatherObject){
         displayError();
     }else{
+        img.src = "./assets/loading.gif";
         updatePage(weatherObject);
     }
 });
